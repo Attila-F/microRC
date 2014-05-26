@@ -1,0 +1,83 @@
+% Use only LaTeX2e, calling the article.cls class and 12-point type.
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+\pagenumbering{gobble}
+
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{times}
+\usepackage{lmodern}
+%\usepackage{cmbright}
+
+\renewcommand\refname{References}
+
+\title{Motorvezérlő modul és kiegészítő elektronika fejlesztése ARM Cortex-M4 processzorra MATLAB segítségével}
+
+
+\author{Fodor Attila}
+
+\date{\today}
+
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
+
+
+
+\begin{document} 
+
+% Double-space the manuscript.
+
+%\baselineskip24pt
+
+% Make the title.
+
+\maketitle
+
+\begin{abstract}
+The paper describes the development of a motor control module in MATLAB and its deployment on the STM32F4-Discovery board and the design of the supplementary electronics of the hardware.
+The STM32F4-Discovery is an evaluation board for the STM32F407/417 ARM Cortex-M4 processor family. It features extensive support, including the direct hardwave support from MATLAB using the ST Discovery Board Support Package. Using this extension a motor control unit was designed and tested in Simulink, and direct deployment with MATLAB Embedded Coder was used to program the board and evaluate the software in a working environment.
+The development followed the basic principles of Model Based Design, taking advantage of the rapid prototyping capabilities of MATLAB, including the process of code generation, which was documented in detail.
+Supplementary electronics were designed to augment the system with wireless connectivity and power electronics, in order to enable the evaluation of the software on a live platform. The design of the electrical circuitry is briefly described, and the programming of the ARM developer board is shown as well.
+The performance of the resulting system is inspected using a mobile ground vehicle platform.
+\end{abstract}
+
+\clearpage
+\pagenumbering{arabic}
+
+\input{mikro}
+
+\bibliography{bibs}
+\bibliographystyle{unsrt}
+
+
+
+% Following is a new environment, {scilastnote}, that's defined in the
+% preamble and that allows authors to add a reference at the end of the
+% list that's not signaled in the text; such references are used in
+% *Science* for acknowledgments of funding, help, etc.
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
